@@ -1,0 +1,48 @@
+{
+  "name": "@dacodes/salesforce",
+  "version": "0.2.0",
+  "description": "Discovery and environment helpers for building Prismatic Salesforce integrations",
+  "keywords": [
+    "salesforce",
+    "prismatic",
+    "integration",
+    "discovery",
+    "sobject",
+    "describe"
+  ],
+  "license": "ISC",
+  "author": "agudacodes",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.3",
+    "typescript": "^7.0.2"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
